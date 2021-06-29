@@ -34,5 +34,3 @@ class PermissionRepository:
         result = cursor.fetchall()
         self.db_conn.close()
         return result
-
-

@@ -9,11 +9,11 @@ current_user_permission_list = []
 current_user_info = {}
 
 PY_MYSQL_CONN_DICT = {
-    "host": '127.0.0.1',
+    "host": '192.168.56.102',
     "port": 3306,
     "user": 'root',
-    "passwd": '666',
-    "db": 'authdb',
+    "passwd": 'root',
+    "db": 'python',
     "charset": 'utf8'
 }
 # import pymysql
