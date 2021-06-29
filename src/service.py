@@ -54,7 +54,7 @@ def register():
 def login():
     while True:
         username = input('请输入用户名：')
-        password = input('请输入用户名：')
+        password = input('请输入密码：')
         pwd = commons.md5(password)
         user_repository = UserInfoRepository()
         # 当前登录的用户信息

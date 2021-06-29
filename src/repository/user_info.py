@@ -14,7 +14,7 @@ class UserInfoRepository:
         value_list = []
         for k, v in kwargs.items():
             key_list.append(k)
-            value_list.append('%%(%s)s' % k)
+            value_list.append('%%(%s)s' % k)  # %%号会被解析成一个%
         sql = sql % (','.join(key_list), ','.join(value_list))
         cursor.execute(sql, kwargs)
         self.db_conn.close()
@@ -47,10 +47,10 @@ class UserInfoRepository:
     def exist(self, username):
         sql = "select 1 from user_info where username=%s"
         cursor = self.db_conn.connect()
-        cursor.execute(sql, [username,])
+        cursor.execute(sql, [username, ])
         result = cursor.fetchone()
         self.db_conn.close()
         return result
 
-    def create(self,username,password,email,user_type):
+    def create(self, username, password, email, user_type):
         pass
